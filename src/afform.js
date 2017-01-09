@@ -110,6 +110,16 @@
 
   class Afform {
     constructor(form, options = {}) {
+      if (typeof form === 'string') {
+        this.form = document.querySelector(form);
+      } else if (form instanceof Element) {
+        this.form = form;
+      }
+
+      if (!form) {
+        throw new Error('Form not found. First argument must be a selector or DOM Node.')
+      }
+
       this.form = form;
       this.form.setAttribute('novalidate', 'novalidate');
       this.formFields = [].slice.call(this.form.elements);

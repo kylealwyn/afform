@@ -135,6 +135,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       _classCallCheck(this, Afform);
 
+      if (typeof form === 'string') {
+        this.form = document.querySelector(form);
+      } else if (form instanceof Element) {
+        this.form = form;
+      }
+
+      if (!form) {
+        throw new Error('Form not found. First argument must be a selector or DOM Node.');
+      }
+
       this.form = form;
       this.form.setAttribute('novalidate', 'novalidate');
       this.formFields = [].slice.call(this.form.elements);

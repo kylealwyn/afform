@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  max-width: 768px;
+  margin: 0 auto;
+  font-family: monospace;
+  padding-top: 3rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  color: #a5acb5;
+  text-align: center;
+}
+
+p {
+  font-size: 1.15rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+form {
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  width: 90%;
+  display: block;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.form-group {
+  padding: 0.75rem;
+}
+
+.form-group + .form-group {
+  border-top: 1px solid #dee2e6;
+}
+
+.form-group > label > span {
+  color: #343a40;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.form-group .afform-error {
+  color: #ff6b6b;
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.form-element {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: 0;
+  display: block;
+  outline: none;
+}
+
+.form-element::-webkit-input-placeholder {
+  color: #adb5bd;
+  font-weight: lighter;
+}
+
+.form-element::-moz-placeholder {
+  color: #adb5bd;
+  font-weight: lighter;
+}
+
+.form-element:-ms-input-placeholder {
+  color: #adb5bd;
+  font-weight: lighter;
+}
+
+.form-element::placeholder {
+  color: #adb5bd;
+  font-weight: lighter;
+}
+
+.form-submit {
+  padding: 1rem;
+  text-align: center;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Afform Example</title>
+    <meta name="description" content="Automatically validate your forms using the HTML5 builtin methods.">
+    <link rel="stylesheet" href="src/afform.css">
+  </head>
+  <body>
+    <header>
+      <h1>Afform.js</h1>
+      <p>Automatically validate your forms using the HTML5 builtin methods</p>
+    </header>
+
+
+    <h2>Initialized Automatically</h2>
+    <section>
+      <form action="" data-afform>
+        <div class="form-group">
+          <label> <span>Email</span>
+            <input
+              class="form-element"
+              type="email"
+              placeholder="Enter your email"
+              required="required"
+              data-validations='{"typeMismatch": "Tis not a valid email"}'
+            />
+          </label>
+        </div>
+        <div class="form-group">
+          <label> <span>Passsword</span>
+            <input
+              class="form-element"
+              type="password"
+              placeholder="••••••••"
+              required
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6,}$"
+              data-validations='{"patternMismatch": "Password must be at least 6 characters, have one uppercase letter and one number"}'
+            />
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="test"> <span>Do you like beer?</span>
+            <input id="test1" type="radio" name="test" value="2" required="required"/>
+            <label for="test1">Yes</label>
+            <input id="test2" type="radio" name="test" value="3"/>
+            <label for="test2">No</label>
+          </label>
+        </div>
+        <div class="form-submit">
+          <button class="btn btn-success">Submit</button>
+        </div>
+      </form>
+    </section>
+
+
+    <h2>Initialized Programatically</h2>
+    <section>
+      <form id="afform">
+        <div class="form-group">
+          <label> <span>Email</span>
+            <input
+              class="form-element"
+              type="email"
+              placeholder="Enter your email"
+              required="required"
+              data-validations='{"typeMismatch": "Tis not a valid email"}'
+            />
+          </label>
+        </div>
+        <div class="form-group">
+          <label> <span>Passsword</span>
+            <input
+              class="form-element"
+              type="password"
+              placeholder="••••••••"
+              required
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6,}$"
+              data-validations='{"patternMismatch": "Password must be at least 6 characters, have one uppercase letter and one number"}'
+            />
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="test"> <span>Do you like beer?</span>
+            <input id="test1" type="radio" name="test" value="2" required="required"/>
+            <label for="test1">Yes</label>
+            <input id="test2" type="radio" name="test" value="3"/>
+            <label for="test2">No</label>
+          </label>
+        </div>
+        <div class="form-submit">
+          <button class="btn btn-success">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <script src="dist/afform.js"></script>
+    <script>
+      const form = document.getElementById('afform');
+      const afform = new Afform(form, {
+        onError: function(element) {
+          console.log(element);
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 {
   "name": "afform",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Automatically validate your forms using the HTML5 builtin methods",
   "main": "afform.js",
   "scripts": {

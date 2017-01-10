@@ -3,7 +3,7 @@
  * Automatically validate your forms using the HTML5 builtin methods
  *
  * Afform - the best way to validate a form
- * @version v0.1.0
+ * @version v0.1.1
  * @link https://github.com/kylealwyn/afform
  * @license MIT
  *
